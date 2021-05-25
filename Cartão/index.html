@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    /* ================RESET CSS===================== */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font-family: "Futura";
+        vertical-align: baseline;
+        text-decoration: none;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+        width: 100vw;
+        display: flex;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+
+    @font-face {
+        font-family: "Futura"; src: url("//db.onlinewebfonts.com/t/46433a0865f85c4831e0b40abfb67847.eot"); src: url("//db.onlinewebfonts.com/t/46433a0865f85c4831e0b40abfb67847.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/46433a0865f85c4831e0b40abfb67847.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/46433a0865f85c4831e0b40abfb67847.woff") format("woff"), url("//db.onlinewebfonts.com/t/46433a0865f85c4831e0b40abfb67847.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/46433a0865f85c4831e0b40abfb67847.svg#Futura") format("svg"); 
+    }
+        
+/* ================RESET CSS===================== */
+ 
+ .left-container{
+     width: 60%;
+     height: 100vh;
+     background-color: #1a1a1a;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: 0.5s;
+ }
+ .left-container-img{
+    width: 50%;
+    
+ }
+.right-container{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    transition: 0.5s;
+}
+.logo-right{
+    display: none;
+}
+.calendary-container{
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    flex-direction: column;
+    border-radius: 25px;
+    overflow: hidden;
+}
+#niver-day{
+    background-color: #ff6600;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#niver-day:hover{
+    background-color: #f78a41;
+}
+.calendary-week{
+    display: flex;
+    width: 100%;
+}
+.calendary-week div{
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #eaeaea;
+}
+.calendary-week div p{
+    width: 60px;
+    text-align: center;
+}
+.header{
+    background-color: rgb(255, 255, 255) !important;
+    border: 1px solid rgb(255, 255, 255);
+    color: #ff6600;
+}
+.formulare{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    margin: 20px 0;
+}
+.formulare form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+.form-email{
+    width: 50%;
+    padding: 30px 0;
+    border-radius: 40px;
+    box-shadow: 0px 3px 5px #b8b8b8;
+    border:none;
+    text-align: center;
+    margin: 20px 0;
+}
+.form-button{
+    width: 30%;
+    padding: 20px 0;
+    border-radius: 40px;
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media(max-width:1100px){
+    .left-container{
+        width: 0px;
+    }
+    .logo-right{
+        display: block;
+        width: 20%;
+    }
+    .right-container{
+        width: 100%;
+        background-color: #1a1a1a;
+        color: white;
+    }
+    .calendary-container .calendary-week p{
+        color: rgb(0, 0, 0);
+    }
+    .header p{
+        color: #ff6600 !important;
+    }
+    #niver-day p{
+        color: white;
+    }
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/46433a0865f85c4831e0b40abfb67847?family=Futura" rel="stylesheet" type="text/css"/>
+    <title>Convite de Aniversário</title>
+</head>
+<body>
+    <div class="left-container">
+        <img class="left-container-img" src="https://i.ibb.co/99hGHS0/Sem-titulo-1.png" alt="">
+    </div>
+
+    <div class="right-container">
+        <img class="logo-right" src="https://i.ibb.co/99hGHS0/Sem-titulo-1.png" alt="">
+        <a>MAIO</a>
+        <div class="calendary-container">
+            <div class="calendary-week">
+                <div class="header"><p>D</p></div>
+                <div class="header"><p>S</p></div>
+                <div class="header"><p>T</p></div>
+                <div class="header"><p>Q</p></div>
+                <div class="header"><p>Q</p></div>
+                <div class="header"><p>S</p></div>
+                <div class="header"><p>S</p></div>
+            </div>
+            <div class="calendary-week">
+                <div><p>1</p></div>
+                <div><p>2</p></div>
+                <div><p>3</p></div>
+                <div><p>4</p></div>
+                <div><p>5</p></div>
+                <div><p>6</p></div>
+                <div><p>7</p></div>
+            </div>
+            <div class="calendary-week">
+                <div><p>8</p></div>
+                <div><p>9</p></div>
+                <div><p>10</p></div>
+                <div><p>11</p></div>
+                <div><p>12</p></div>
+                <div><p>13</p></div>
+                <div><p>14</p></div>
+            </div>
+            <div class="calendary-week">
+                <div><p>15</p></div>
+                <div><p>16</p></div>
+                <div><p>17</p></div>
+                <div><p>18</p></div>
+                <div><p>19</p></div>
+                <div><p>20</p></div>
+                <div><p>21</p></div>
+            </div>
+            <div class="calendary-week">
+                <div><p>22</p></div>
+                <div><p>23</p></div>
+                <div><p>24</p></div>
+                <div id="niver-day"><p>25</p></div>
+                <div><p>26</p></div>
+                <div><p>27</p></div>
+                <div><p>28</p></div>
+            </div>
+            <div class="calendary-week">
+                <div><p>29</p></div>
+                <div><p>30</p></div>
+                <div><p>31</p></div>
+            </div>
+        </div>
+
+        <div class="formulare">
+            <p>RECEBA AS NOTÍCIAS PELO EMAIL</p>
+            <form action="">
+                <input class="form-email" type="email" placeholder="Email">
+                <input class="form-button" type="button" value="RECEBER">
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
